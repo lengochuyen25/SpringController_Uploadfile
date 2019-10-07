@@ -108,8 +108,7 @@ public class MyFileUploadController {
 
         // Thư mục gốc upload file.
 
-        String uploadRootPath = request.getServletPath();
-
+        String uploadRootPath = request.getServletContext().getRealPath("upload");
         System.out.println("uploadRootPath=" + uploadRootPath);
 
         File uploadRootDir = new File(uploadRootPath);
